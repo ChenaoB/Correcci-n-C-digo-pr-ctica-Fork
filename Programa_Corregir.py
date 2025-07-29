@@ -1,15 +1,29 @@
-def c(r,h):return 3.14*r*r*h
-def v(l,a,h):return l*a*h
-def cubo(a):return a*a*a
+import math 
+
+def Volumen_cilindro(radio , altura):
+    return math.pi * (radio ** 2) * altura
+
+
+def Volumen_prisma(largo , ancho , altura):
+    return largo * ancho * altura
+
+
+def Volumen_cubo(lado):
+    return math.pow(lado , 3)
+
+
 def principal():
-    r=5
-    h=10
-    print('El volumen del cilindro es:',c(r,h))
-    l=6
-    a=4
-    h2=2
-    print('volumen del prisma rectangular es:',v(l,a,h2))
-    a2=3
-    print('El volumen del cubo es:',cubo(a2))
-#Calculo volumenes
+    radio =  5
+    altura  =  10
+    print('El volumen del cilindro es:', Volumen_cilindro(radio , altura ))
+    
+    largo = 6
+    ancho = 4
+    altura2 = 2
+    print('El volumen del prisma rectangular es: ', Volumen_prisma(largo , ancho , altura2))
+    
+    lado = 3
+    print('El volumen del cubo es: ', Volumen_cubo(lado))
+
+
 principal()
