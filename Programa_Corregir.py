@@ -1,32 +1,33 @@
 import math
 
-def c(r, h):
-    return math.pi * r * r * h
+def volumen_cilindro(radio, altura):
+    """Calcula el volumen de un cilindro."""
+    return math.pi * radio * radio * altura
 
-def v(l, a, h):
-    return l * a * h
+def volumen_prisma_rectangular(largo, ancho, altura):
+    """Calcula el volumen de un prisma rectangular."""
+    return largo * ancho * altura
 
-def cubo(a):
-    return a ** 3
+def volumen_cubo(lado):
+    """Calcula el volumen de un cubo."""
+    return lado * lado * lado
 
 def principal():
-    print("🧮 Cálculo de Volúmenes 🧮")
+    # Cálculo del volumen del cilindro
+    radio_cilindro = 5
+    altura_cilindro = 10
+    print('El volumen del cilindro es:', volumen_cilindro(radio_cilindro, altura_cilindro))
 
-    try:
-        r = float(input("Ingresa el radio del cilindro: "))
-        h = float(input("Ingresa la altura del cilindro: "))
-        print('🔸 El volumen del cilindro es:', round(c(r, h), 2))
+    # Cálculo del volumen del prisma rectangular
+    largo_prisma = 6
+    ancho_prisma = 4
+    altura_prisma = 2
+    print('El volumen del prisma rectangular es:', volumen_prisma_rectangular(largo_prisma, ancho_prisma, altura_prisma))
 
-        l = float(input("\nIngresa el largo del prisma rectangular: "))
-        a = float(input("Ingresa el ancho del prisma rectangular: "))
-        h2 = float(input("Ingresa la altura del prisma rectangular: "))
-        print('🔹 El volumen del prisma rectangular es:', round(v(l, a, h2), 2))
+    # Cálculo del volumen del cubo
+    lado_cubo = 3
+    print('El volumen del cubo es:', volumen_cubo(lado_cubo))
 
-        a2 = float(input("\nIngresa el lado del cubo: "))
-        print('🔺 El volumen del cubo es:', round(cubo(a2), 2))
-
-    except ValueError:
-        print("⚠️ Entrada inválida. Por favor, ingresa números válidos.")
-
-# Ejecutar programa
-principal()
+# Ejecución de la función principal para calcular volúmenes
+if __name__ == "__main__":
+    principal()
