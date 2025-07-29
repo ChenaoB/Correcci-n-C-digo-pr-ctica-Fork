@@ -23,7 +23,6 @@ def calcular():
     lado_cubo = 3
     print('El volumen del cubo es:', vol_cubo(lado_cubo))
 
-#calcular
 calcular()
 
 
